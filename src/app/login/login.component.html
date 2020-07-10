@@ -1,0 +1,27 @@
+<div class="container">
+<mat-toolbar color="accent">
+  <span>LOGIN</span>
+</mat-toolbar>
+<mat-card class="my-card">
+  <span class="color" *ngIf="errormessage">{{errormessage}}</span>
+  <mat-card-content>
+    <form class="my-form" #f="ngForm" (ngSubmit)="onLogin(f.value)">
+      <mat-form-field class="full-width" color="accent">
+        <mat-label>Username</mat-label>
+        <input  matInput  ngModel placeholder="Username" name="username" required>
+      </mat-form-field>
+      <mat-form-field class="full-width" color="accent">
+        <mat-label>Password</mat-label>
+        <input  matInput  ngModel placeholder="Password" name="password" type="password" required>
+      </mat-form-field>
+      <mat-card-actions>
+      <button mat-raised-button color="accent" type="submit">LOGIN</button>
+      <button mat-raised-button color="primary" (click)="onClick()">REGISTER</button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+
+
+
+</mat-card>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <span>REGISTER</span>
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+      <form class="my-form" #f="ngForm" (ngSubmit)="onRegister(f.value)">
+        <mat-error *ngIf="errormessage">{{errormessage}}</mat-error>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>FirstName</mat-label>
+          <input  matInput  ngModel placeholder="FirstName" name="firstName" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>LastName</mat-label>
+          <input  matInput  ngModel placeholder="LastName" name="lastName" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Email</mat-label>
+          <input  matInput  ngModel placeholder="Email" name="email" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Phone</mat-label>
+          <input  matInput  ngModel placeholder="Phone" name="phone" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Username</mat-label>
+          <input matInput  ngModel placeholder="Username" name="username" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Password</mat-label>
+          <input  matInput  ngModel placeholder="Password" name="password" type="password" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Confirm Password</mat-label>
+          <input  matInput  ngModel placeholder="Password" name="passwordconfirme" type="password" required>
+        </mat-form-field>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Register</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+
+
+
+  </mat-card>
+</div>

@@ -1,0 +1,38 @@
+<span class="marge">1.Please select the account you would like to Transfer From :</span><p></p>
+<form #f="ngForm" (ngSubmit)="onTransfer(f.value)" class="marge">
+  <mat-form-field color="accent">
+    <mat-label>Select an account</mat-label>
+    <mat-select [(ngModel)]="account" name="account" (selectionChange)="onChange()">
+      <mat-option  value="PrimaryAccount" >
+        Primary Account
+      </mat-option>
+      <mat-option  value="SavingsAccount" >
+        Savings Account
+      </mat-option>
+    </mat-select>
+  </mat-form-field><p></p>
+  <span>2.Please select the account you would like to Transfer To :</span><p></p>
+  <mat-form-field color="accent">
+    <mat-label>Select an account</mat-label>
+    <mat-select [(ngModel)]="account1" name="account1" value="{{account1}}" (selectionChange)="onChange1()">
+      <mat-option  value="PrimaryAccount"  >
+        Primary Account
+      </mat-option>
+      <mat-option  value="SavingsAccount" >
+        Savings Account
+      </mat-option>
+    </mat-select>
+  </mat-form-field><p></p>
+  <span>3.Please specify the amount you would like to transfer :</span><p></p>
+  <mat-form-field class="example-full-width" color="accent">
+    <mat-label>Amount $</mat-label>
+    <input matInput ngModel name="amount" type="text">
+  </mat-form-field><p></p>
+  <mat-form-field class="invisible example-full-width" color="accent">
+    <mat-label>Amount $</mat-label>
+    <input matInput ngModel name="username" type="text" value={{username}}>
+  </mat-form-field><p></p>
+  <mat-error *ngIf="errormessage">{{errormessage}}</mat-error>
+  <button mat-raised-button class="example-full-width" color="accent" type="submit">Transfer</button>
+</form>
+

@@ -1,0 +1,66 @@
+.backG{
+  background-color: lightgrey;
+}
+
+
+.marge{
+  margin-top: 80px;
+  position: fixed;
+  width: 600px;
+  height: 100px;
+  margin-left: 50px;
+  text-align-all: center;
+  background-color: lightslategrey;
+  line-height: 100px;
+}
+span{
+  color:white;
+  font-size: 30px;
+}
+mat-card-footer{
+font-size: 15px;  text-align-all: center;  line-height: 50px;background-color: gold;
+}
+.details{
+margin-left:10px;
+color: black;
+font-size:20px;}
+.marge2{
+  position: fixed;
+  margin-top: 300px;
+  width:600px;
+  height: 100px;
+  margin-left: 50px;
+  text-align-all: center;
+  background-color: lightslategrey;
+  line-height: 100px;
+}
+.icon{
+margin-left:350px;
+}
+.marge3{
+  position: fixed;
+  margin-top: 80px;
+  width: 200px;
+  height: 100px;
+  margin-left: 900px;
+  background-color: lightgrey;
+  line-height: 100px;
+}
+.icon1{
+  font-size: 50px;
+}
+.deposit{
+  margin-left: 30px;
+  font-size: 30px;
+  color: black;
+}
+.marge4{
+  position: fixed;
+  margin-top: 300px;
+  width: 200px;
+  height: 100px;
+  margin-left: 900px;
+  background-color: lightgrey;
+  line-height: 100px;
+}
+

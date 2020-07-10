@@ -1,0 +1,22 @@
+<span class="marge">1.Please select the account you would like to deposit :</span><p></p>
+  <form #f="ngForm" (ngSubmit)="onDeposit(f.value)" class="marge">
+  <mat-form-field color="accent">
+    <mat-label>Select an account</mat-label>
+    <mat-select [(ngModel)]="account" name="account">
+      <mat-option  value="PrimaryAccount" >
+        Primary Account
+      </mat-option>
+      <mat-option  value="SavingsAccount" >
+        Savings Account
+      </mat-option>
+    </mat-select>
+  </mat-form-field><p></p>
+  <span>2.Please specify the amount you would like to deposit :</span><p></p>
+<mat-form-field class="example-full-width" color="accent">
+    <mat-label>Amount $</mat-label>
+    <input matInput ngModel name="amount" type="text">
+  </mat-form-field><p></p>
+
+    <button mat-raised-button class="example-full-width" color="accent" type="submit">Deposit</button>
+  </form>
+

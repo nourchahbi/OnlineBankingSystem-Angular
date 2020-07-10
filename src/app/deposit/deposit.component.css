@@ -1,0 +1,15 @@
+.marge{
+  position: fixed;
+  margin-top: 80px;
+  margin-left: 50px;
+  font-weight: bolder;
+}
+.example-full-width{
+  width: 400px;
+}
+.invisible{
+  display: block;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}

@@ -1,0 +1,12 @@
+<table *ngIf="transactions">
+  <thead>
+  <th>Date</th><th>Description</th><th>Type</th><th>Status</th><th>Amount</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of transactions">
+    <td>{{t.date | date:'medium' }}</td><td>{{t.description}}</td><td>{{t.type}}</td><td>{{t.status}}</td><td>{{t.amount}}</td>
+
+  </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,51 @@
+
+
+<div class="container">
+  <mat-toolbar color="accent">
+    <span>Recipient Information</span>
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+      <form class="my-form" #f="ngForm" (ngSubmit)="onaddRecipient(f.value)">
+        <mat-error *ngIf="errormessage">{{errormessage}}</mat-error>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Name</mat-label>
+          <input  matInput  ngModel placeholder="Name" name="name" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Email</mat-label>
+          <input  matInput  ngModel placeholder="Email" name="email" type="email" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Phone</mat-label>
+          <input  matInput  ngModel placeholder="Phone" name="phone" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Account Number</mat-label>
+          <input  matInput  ngModel placeholder="Account Number" name="accountNumber" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Description</mat-label>
+          <textarea matInput  ngModel placeholder="Description" name="description" required></textarea>
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" type="submit">Add/edit Recipient</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
+<table>
+  <thead >
+  <th>Recipient Name</th><th>Recipient Email</th><th>Recipient Phone</th><th>Recipient Account Number</th><th>Recipient Description</th>
+  </thead>
+  <tbody  *ngIf="recipients">
+  <tr *ngFor="let r of recipients">
+    <td>{{r.name}}</td><td>{{r.email}}</td><td>{{r.phone}}</td><td>{{r.accountNumber}}</td><td>{{r.description}}</td>
+
+  </tr>
+
+  </tbody>
+</table>

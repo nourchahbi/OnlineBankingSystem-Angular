@@ -1,0 +1,16 @@
+<div class="backG">
+
+  <mat-card class="marge"><span *ngIf="user" >Primary Balance : {{user.primaryAccount.accountBalance}} $</span>
+    <mat-card-footer><a mat-button class="details" routerLink="/PrimaryTransactions">View Details</a> <a mat-button class="icon" routerLink="/PrimaryTransactions"><mat-icon>forward</mat-icon></a></mat-card-footer>
+  </mat-card>
+  <mat-card class="marge3"><mat-icon class="icon1">account_balance_wallet</mat-icon><span class="deposit">Deposit </span>
+    <mat-card-footer><button mat-button (click)="goToDeposit()" class="details">Go to Deposit</button></mat-card-footer>
+  </mat-card>
+  <mat-card class="marge4"><mat-icon class="icon1">money</mat-icon><span class="deposit">Withdraw </span>
+    <mat-card-footer><button mat-button (click)="goToWithdraw()" class="details">Go to Withdrawal</button></mat-card-footer>
+  </mat-card>
+  <mat-card class="marge2"><span *ngIf="user">Savings Balance : {{user.savingsAccount.accountBalance}} $</span>
+    <mat-card-footer><a mat-button class="details" routerLink="/SavingsTransactions">View Details</a> <a mat-button class="icon" routerLink="/SavingsTransactions"><mat-icon>forward</mat-icon></a></mat-card-footer>
+  </mat-card>
+
+</div>

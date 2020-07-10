@@ -1,0 +1,32 @@
+<div *ngIf="isAuthenticated()" class="img">
+<mat-toolbar color="accent" class="mat-elevation-z2">Online Banking System
+  <a routerLink="/home" mat-button class="home">Home</a>
+  <button mat-button [matMenuTriggerFor]="menu" class="transfer">Transfer</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/TransferBetweenAccounts">Between Accounts</button>
+    <button mat-menu-item routerLink="/recipient">Add/edit Recipient</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu1" class="transfer">Appointment</button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item routerLink="/appointment">Schedule an Appointment</button>
+  </mat-menu>
+
+  <a routerLink="/admin" mat-button class="home" *ngIf="isAdmin()">Admin Dashboard</a>
+
+
+  <div class="dimension">
+  <span >{{username}}</span>
+  <mat-select >
+    <mat-option >
+      Profile
+    </mat-option>
+    <mat-option (click)="onLogout()">
+      Logout
+    </mat-option>
+  </mat-select>
+</div>
+</mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
+

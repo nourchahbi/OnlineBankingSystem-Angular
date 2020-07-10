@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-toolbar color="accent">
+    <span>Schedule an Appointment</span>
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+      <form class="my-form" #f="ngForm" (ngSubmit)="onaddAppointment(f.value)">
+        <mat-error *ngIf="errormessage">{{errormessage}}</mat-error>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Pick a Date and Time :</mat-label>
+          <input ngModel matInput [matDatepicker]="picker" required name="date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Pick a Location : </mat-label>
+          <input  matInput  ngModel placeholder="Location" name="location" required>
+        </mat-form-field>
+        <mat-form-field class="full-width" color="accent">
+          <mat-label>Notes :</mat-label>
+          <textarea matInput  ngModel placeholder="Description" name="description" required></textarea>
+        </mat-form-field>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" type="submit">Submit Scheduling</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
+
